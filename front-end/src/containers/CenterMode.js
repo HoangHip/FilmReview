@@ -39,27 +39,28 @@ export default class CenterMode extends Component {
     })
   }
 
-  // renderListTrailer = () => {
-  //   const { listTrailer } = this.state
+  renderListTrailer = () => {
+    const { listTrailer } = this.state
 
-  //   return listTrailer.map(film => {
-  //       return (
-  //           <div>
-  //             <img  alt="" src={film.image} className="trailer-img rounded"/>
-  //             <Button type="primary" onClick={this.showModal}>
-  //               Open Modal
-  //             </Button>
-  //             <Modal
-  //               title="Basic Modal"
-  //               visible={this.state.visible}
-  //               onCancel={this.handleCancel}
-  //             >
-  //               <ReactPlayer url={film.link} playing/>
-  //             </Modal>
-  //           </div>
-  //       );
-  //   });
-  // };
+    return listTrailer.map(film => {
+        return (
+            <div>
+              <img  alt="" src={film.image} className="trailer-img rounded"/>
+              <Button type="primary" onClick={this.showModal}>
+                Open Modal
+              </Button>
+              <Modal
+                
+                title="Basic Modal"
+                visible={this.state.visible}
+                onCancel={this.handleCancel}
+              >
+                <ReactPlayer url={film.link} />
+              </Modal>
+            </div>
+        );
+    });
+  };
 
   render() {
     const settings = {
@@ -71,24 +72,11 @@ export default class CenterMode extends Component {
       slidesToScroll: 5
     };
     return (
-        // <Container>
-        //     <Slider {...settings}>
-        //         {this.renderListTrailer()}
-        //     </Slider>
-        // </Container>
-        <div>
-              <img  alt="" src="https://i.imgur.com/key4Yt9.jpg" className="trailer-img rounded"/>
-              <Button type="primary" onClick={this.showModal}>
-                Open Modal
-              </Button>
-              <Modal
-                title="Basic Modal"
-                visible={this.state.visible}
-                onCancel={this.handleCancel}
-              >
-                <ReactPlayer url="https://www.youtube.com/watch?v=0ks6tmpP-OY" playing/>
-              </Modal>
-        </div>
+        <Container>
+            <Slider {...settings}>
+                {this.renderListTrailer()}
+            </Slider>
+        </Container>
     )
   }
 }
