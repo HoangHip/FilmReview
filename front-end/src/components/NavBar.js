@@ -57,9 +57,9 @@ export default class NavBar extends Component {
         <Navbar color="#ffffff" light expand="md">
         <Container>
           <Row style= {{width : "100%"}}>
-            <Col md="5"><a></a></Col>
+            <Col md="5"><p></p></Col>
             <Col className="text-center" md="2">
-              <NavbarBrand href="/">Film Review</NavbarBrand>
+              <NavbarBrand href="/">RA RẠP COI GÌ</NavbarBrand>
             </Col>
             <Col md="3">
               <Input/>

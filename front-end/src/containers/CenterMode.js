@@ -1,5 +1,5 @@
 
-import React, { Component , Fragment } from 'react';
+import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
 import axios from 'axios';
 import Slider from 'react-slick';
@@ -41,16 +41,16 @@ export default class CenterMode extends Component {
 
   renderListTrailer = () => {
     const { listTrailer } = this.state
-
+    console.log(listTrailer)
     return listTrailer.map(film => {
         return (
+          
             <div>
               <img  alt="" src={film.image} className="trailer-img rounded"/>
               <Button type="primary" onClick={this.showModal}>
                 Open Modal
               </Button>
               <Modal
-                
                 title="Basic Modal"
                 visible={this.state.visible}
                 onCancel={this.handleCancel}

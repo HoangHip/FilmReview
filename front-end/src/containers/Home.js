@@ -1,4 +1,4 @@
-import React, { Component , Fragment } from 'react';
+import React, { Component} from 'react';
 import { 
     Container,
     Row,
@@ -9,6 +9,7 @@ import ListFilm from '../components/ListFilm';
 import ListTrailer from '../components/ListTrailer'
 
 export default class Home extends Component {
+    
     render() {
         return (
             <div>
